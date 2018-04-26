@@ -37,7 +37,13 @@ randomShow=random.sample(only2001,3)
 ##    print('{:10} {:25}'.format(show['Show']['Name'][0:10],show['Show']['Type']))
 ##    print(show['Show']['Name'],show['Show']['Type'])
 
-print('<table>')
-for show in randomShow:
-    print('<tr><td> {} </td><td> {} </td></tr>'.format(show['Show']['Name'],show['Show']['Type']))
-print('</table>')
+##print('<table>')
+##for show in randomShow:
+##    print('<tr><td> {} </td><td> {} </td></tr>'.format(show['Show']['Name'],show['Show']['Type']))
+##print('</table>)
+
+name = [randomShow[0]['Show']['Name'],randomShow[1]['Show']['Name'],randomShow[2]['Show']['Name']]
+gross = [randomShow[0]['Statistics']['Gross'],randomShow[1]['Statistics']['Gross'],randomShow[2]['Statistics']['Gross']]
+
+plt.bar(name,gross)
+plt.show()
