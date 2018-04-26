@@ -33,4 +33,11 @@ randomShow=random.sample(only2001,3)
 ##    print('performance year:', show['Date']['Year'])
 ##    print('number of performances in the week:', show['Statistics']['Performances'])
 
-print('{:25}'.format(randomShow['Show']['Name']))
+##for show in randomShow:
+##    print('{:10} {:25}'.format(show['Show']['Name'][0:10],show['Show']['Type']))
+##    print(show['Show']['Name'],show['Show']['Type'])
+
+print('<table>')
+for show in randomShow:
+    print('<tr><td> {} </td><td> {} </td></tr>'.format(show['Show']['Name'],show['Show']['Type']))
+print('</table>')
